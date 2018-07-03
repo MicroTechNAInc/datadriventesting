@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Data Driven Testing" duration-ms="3272" started-at="2018-06-30T23:25:30Z" finished-at="2018-06-30T23:25:33Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="3272" started-at="2018-06-30T23:25:30Z" finished-at="2018-06-30T23:25:33Z">
+      <class name="com.mt.testcases.LoginTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mt.testcases.LoginTest@6e0e048a]" name="setUp" is-config="true" duration-ms="9705" started-at="2018-06-30T19:25:20Z" finished-at="2018-06-30T19:25:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:com.mt.testcases.LoginTest@6e0e048a]" name="loginAsBankManager" duration-ms="3236" started-at="2018-06-30T19:25:30Z" finished-at="2018-06-30T19:25:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAsBankManager -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mt.testcases.LoginTest@6e0e048a]" name="tearDown" is-config="true" duration-ms="1238" started-at="2018-06-30T19:25:33Z" finished-at="2018-06-30T19:25:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mt.testcases.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Data Driven Testing -->
+</testng-results>
