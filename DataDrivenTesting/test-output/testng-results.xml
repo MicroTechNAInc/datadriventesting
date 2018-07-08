@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Data Driven Testing" duration-ms="3272" started-at="2018-06-30T23:25:30Z" finished-at="2018-06-30T23:25:33Z">
+  <suite name="Data Driven Testing" duration-ms="4786" started-at="2018-07-08T00:49:21Z" finished-at="2018-07-08T00:49:26Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="3272" started-at="2018-06-30T23:25:30Z" finished-at="2018-06-30T23:25:33Z">
-      <class name="com.mt.testcases.LoginTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mt.testcases.LoginTest@6e0e048a]" name="setUp" is-config="true" duration-ms="9705" started-at="2018-06-30T19:25:20Z" finished-at="2018-06-30T19:25:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:com.mt.testcases.LoginTest@6e0e048a]" name="loginAsBankManager" duration-ms="3236" started-at="2018-06-30T19:25:30Z" finished-at="2018-06-30T19:25:33Z">
+    <test name="Login Test" duration-ms="3188" started-at="2018-07-08T00:49:21Z" finished-at="2018-07-08T00:49:25Z">
+      <class name="com.mt.testcases.BankManagerLoginTest">
+        <test-method status="PASS" signature="loginAsBankManager()[pri:0, instance:com.mt.testcases.BankManagerLoginTest@610694f1]" name="loginAsBankManager" duration-ms="3166" started-at="2018-07-07T20:49:21Z" finished-at="2018-07-07T20:49:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mt.testcases.LoginTest@6e0e048a]" name="tearDown" is-config="true" duration-ms="1238" started-at="2018-06-30T19:25:33Z" finished-at="2018-06-30T19:25:34Z">
+      </class> <!-- com.mt.testcases.BankManagerLoginTest -->
+    </test> <!-- Login Test -->
+    <test name="Add Customer Test" duration-ms="1557" started-at="2018-07-08T00:49:25Z" finished-at="2018-07-08T00:49:26Z">
+      <class name="com.mt.testcases.AddCustomerTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.mt.testcases.AddCustomerTest@5d76b067]" name="setUp" is-config="true" duration-ms="8725" started-at="2018-07-07T20:49:13Z" finished-at="2018-07-07T20:49:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="addCustomer(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mt.testcases.AddCustomerTest@5d76b067]" name="addCustomer" duration-ms="1531" started-at="2018-07-07T20:49:25Z" data-provider="getData" finished-at="2018-07-07T20:49:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[matt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[simon]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10018.0]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Customer added successfully]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addCustomer -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mt.testcases.AddCustomerTest@5d76b067]" name="tearDown" is-config="true" duration-ms="1343" started-at="2018-07-07T20:49:26Z" finished-at="2018-07-07T20:49:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.mt.testcases.LoginTest -->
-    </test> <!-- Test -->
+      </class> <!-- com.mt.testcases.AddCustomerTest -->
+    </test> <!-- Add Customer Test -->
   </suite> <!-- Data Driven Testing -->
 </testng-results>

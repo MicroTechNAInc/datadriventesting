@@ -120,7 +120,7 @@
 		</plugins>
 		<testResources>
       		<testResource>
-        		<directory>src/test/resources</directory>
+        		<directory>src/test/resources/properties</directory>
         		<includes>
           			<include>log4j.properties</include>
         		</includes>
