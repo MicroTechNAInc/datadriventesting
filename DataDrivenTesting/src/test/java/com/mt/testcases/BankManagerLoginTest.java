@@ -3,6 +3,7 @@ package com.mt.testcases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import com.mt.base.TestBase;
 
@@ -24,6 +25,14 @@ public class BankManagerLoginTest extends TestBase {
 		
 
 		Assert.assertTrue( isElementPresent(OR.getProperty("addCustBtn")), "Did not find the Element");
+		/*
+		System.setProperty("org.uncommons.reportng.escape-output", "false"); 
+		Reporter.log("<a target=_blank href=mypic.jpg > Login Screen shot from BM</a>");
+		Reporter.log("<br>");
+		Reporter.log("<a target=_blank href=mypic.jpg > <img src=mypic.jpg width=30 height=30  >BM</img></a>");
+		*/
+		
+		
 		
 //		try {
 //			driver.findElement(By.cssSelector("button[ng-class='btnClass1']"));

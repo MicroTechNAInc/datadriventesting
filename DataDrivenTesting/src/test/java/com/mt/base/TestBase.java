@@ -19,6 +19,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.mt.utilities.ExcelReader;
+import com.mt.utilities.ExtentManager;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
 
 public class TestBase {
 	public static String projectPath = System.getProperty("user.dir");
@@ -33,6 +36,10 @@ public class TestBase {
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	
 	public static WebDriverWait wait;
+	
+	public ExtentReports extentReportObject = ExtentManager.getInstance(); 
+	public static ExtentTest test;
+
 	
 	
 	@BeforeSuite
