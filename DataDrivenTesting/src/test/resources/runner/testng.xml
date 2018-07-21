@@ -22,7 +22,11 @@
 		</classes>
 	</test>
 
-
+	<test thread-count="5" name="Open Account Test">
+		<classes>
+			<class name="com.mt.testcases.OpenAccountTest" />
+		</classes>
+	</test>
 
 
 

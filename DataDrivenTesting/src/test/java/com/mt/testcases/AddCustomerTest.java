@@ -1,6 +1,8 @@
 package com.mt.testcases;
 
 
+import java.lang.reflect.Method;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -9,12 +11,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.mt.base.TestBase;
+import com.mt.utilities.TestUtils;
 
 public class AddCustomerTest extends TestBase {
 	
-	@DataProvider
-	public Object[][] getData(){
-		String sheetName = "AddCustomerTest";
+	/*
+	@DataProvider(name="testData")
+	public Object[][] getData(Method m){   //import java.lang
+		String sheetName = m.getName();
 		int rows = excel.getRowCount( sheetName );  //row=2
 		int cols = excel.getColumnCount(sheetName); //col =3
 		Object[][] data = new Object[rows-1][cols];
@@ -27,17 +31,26 @@ public class AddCustomerTest extends TestBase {
 		}//row for
 		return data;
 	}//
-	@Test(dataProvider="getData")
-	public void addCustomer(String firstName, String lastName, String postCode, String msg) throws InterruptedException {
+	*/
+	//@Test(dataProvider="testData")
+	@Test(dataProviderClass=TestUtils.class, dataProvider="dp")
+	public void addCustomerTest(String firstName, String lastName, String postCode, String msg) throws InterruptedException {
 		
 		log.debug(firstName);
-		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
+		//driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
+		click("addCustBtn_CSS");
 		
-		driver.findElement(By.cssSelector(OR.getProperty("firstName"))).sendKeys(firstName);
-		driver.findElement(By.cssSelector(OR.getProperty("lastName"))).sendKeys(lastName);
-		driver.findElement(By.cssSelector(OR.getProperty("postCode"))).sendKeys(postCode);
 		
-		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
+		//driver.findElement(By.cssSelector(OR.getProperty("firstName"))).sendKeys(firstName);
+		//driver.findElement(By.cssSelector(OR.getProperty("lastName"))).sendKeys(lastName);
+		//driver.findElement(By.cssSelector(OR.getProperty("postCode"))).sendKeys(postCode);
+		type("firstName_CSS",firstName);
+		type("lastName_CSS",lastName);
+		type("postCode_CSS",postCode);
+		
+		
+		//driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
+		click("addBtn_CSS");
 		
 		//Thread.sleep(5000);
 		

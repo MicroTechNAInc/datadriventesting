@@ -22,6 +22,8 @@ import com.mt.utilities.ExcelReader;
 import com.mt.utilities.ExtentManager;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
 
 public class TestBase {
 	public static String projectPath = System.getProperty("user.dir");
@@ -78,6 +80,17 @@ public class TestBase {
 		}//if (driver == null)	
 	}//setUp
 	
+	public void click(String locator) {
+		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		test.log(LogStatus.INFO, "Clicking on : " + locator);
+	}
+	public void type(String locator, String value) {
+		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		test.log(LogStatus.INFO, "Typing in : "+locator + " with value: " + value);
+	}
+	
+	
+
 	public boolean isElementPresent(String css) {
 		try {
 			driver.findElement(By.cssSelector(css));
