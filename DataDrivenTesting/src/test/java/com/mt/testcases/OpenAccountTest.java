@@ -23,10 +23,10 @@ public class OpenAccountTest extends TestBase {
 	}//
 	*/
 	
-	@Test
-	public void myTest() {
-		test.log(LogStatus.INFO, "open account");
-		Assert.assertTrue( true );
+	@Test(dataProviderClass=TestUtils.class, dataProvider="dp")
+	public void openAccountTest(String customer, String currency) {
+		//test.log(LogStatus.INFO, "open account");
+		//Assert.assertTrue( true );
 	}
 	
 	
